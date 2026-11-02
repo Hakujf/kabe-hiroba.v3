@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="可部ひろばのロゴ">
+  <defs>
+    <clipPath id="clip">
+      <circle cx="32" cy="32" r="30"/>
+    </clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#2f7d5b"/>
+  <g clip-path="url(#clip)">
+    <circle cx="44" cy="20" r="6" fill="#f7faf9"/>
+    <path d="M4 46 Q18 22 30 38 Q42 26 60 46 L60 64 L4 64 Z" fill="#e8f3ee"/>
+    <path d="M8 52 Q20 46 32 52 T56 52" fill="none" stroke="#2b6c8f" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>
