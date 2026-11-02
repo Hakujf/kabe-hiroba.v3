@@ -210,3 +210,69 @@ main {
 .card-link p {
   margin-bottom: 0;
 }
+/* ===== 地図のピンの色 ===== */
+.pin-wrapper {
+  background: none;
+  border: none;
+}
+
+.pin {
+  display: block;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.pin::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.color-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ===== 場所の一覧 ===== */
+.spot-card .spot-name {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.spot-card .spot-name:hover {
+  text-decoration: underline;
+}
+
+.spot-category {
+  font-size: 0.85rem;
+  color: var(--sub-text);
+  margin-top: 2px;
+}
+
+.spot-card p {
+  margin: 6px 0 0;
+}
