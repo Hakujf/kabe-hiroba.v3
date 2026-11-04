@@ -6,7 +6,7 @@ async function loadLatestNews() {
     news.sort((a, b) => b.date.localeCompare(a.date));
 
     listEl.innerHTML = "";
-    news.slice(0, 3).forEach(n => {
+    news.slice(0, 6).forEach(n => {
       const article = document.createElement("article");
       article.className = "news-item";
 
