@@ -6,7 +6,7 @@ async function loadNews() {
   try {
     const response = await fetch("data/news.json");
     allNews = await response.json();
-    allNews.sort((a, b) => b.date.localeCompare(a.date)); // 新しい順
+    allNews.sort((a, b) => b.date.localeCompare(a.date));
     renderFilter();
     renderNews();
   } catch (error) {
@@ -42,6 +42,7 @@ function renderNews() {
     listEl.textContent = "該当するお知らせはありません。";
     return;
   }
+
   items.forEach(n => {
     const article = document.createElement("article");
     article.className = "news-item";
@@ -57,8 +58,16 @@ function renderNews() {
 
     const title = document.createElement("h3");
     title.textContent = n.title;
-    const body = document.createElement("p");
+    title.className = "news-title";
+
+    const body = document.createElement("div");
+    body.className = "news-body";
     body.textContent = n.body;
+
+    // タップで開閉
+    article.addEventListener("click", () => {
+      article.classList.toggle("open");
+    });
 
     article.append(meta, title, body);
     listEl.appendChild(article);
