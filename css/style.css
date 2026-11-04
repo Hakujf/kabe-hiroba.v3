@@ -356,3 +356,99 @@ main {
   .hero { padding: 48px 16px; }
   .hero h2 { font-size: 1.5rem; }
 }
+/* ===== 行事カレンダー ===== */
+.month-heading {
+  margin: 32px 0 12px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--green);
+  color: var(--green);
+}
+
+.event-list {
+  display: grid;
+  gap: 12px;
+}
+
+.event-card {
+  display: flex;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.event-card.next {
+  border: 2px solid var(--green);
+  background: var(--green-light);
+}
+
+.event-date {
+  flex-shrink: 0;
+  width: 76px;
+  text-align: center;
+  background: var(--green);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 4px;
+  line-height: 1.3;
+}
+
+.event-month {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.event-day {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.event-weekday {
+  display: block;
+  font-size: 0.8rem;
+}
+
+.event-body {
+  min-width: 0;
+}
+
+.event-label {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+
+.event-title {
+  display: inline;
+  margin: 0 8px 0 0;
+  font-size: 1.15rem;
+  color: var(--blue);
+}
+
+.event-meta {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: var(--sub-text);
+}
+
+.event-desc {
+  margin-top: 6px;
+}
+
+.past-box {
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.past-box summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--sub-text);
+}
