@@ -452,3 +452,39 @@ main {
   font-weight: bold;
   color: var(--sub-text);
 }
+/* ===== お知らせの開閉 ===== */
+.news-item {
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.news-item:hover {
+  box-shadow: 0 2px 8px rgba(47, 125, 91, 0.12);
+}
+
+.news-title {
+  margin: 6px 0 0;
+  color: var(--blue);
+  font-size: 1.05rem;
+}
+
+.news-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  transition: max-height 0.3s ease, opacity 0.25s ease, margin 0.25s ease;
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.news-item.open .news-body {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.news-item.open {
+  border-color: var(--green);
+}
