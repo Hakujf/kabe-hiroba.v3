@@ -5,7 +5,7 @@ function todayString() {
   const d = new Date();
   const m = String(d.getMonth() + 1).padStart(2, "0");
   const day = String(d.getDate()).padStart(2, "0");
-  return d.getFullYear() + "-" + m + "-" + day;
+  return d.getFullYear() + "-" + m + "-" + day;　
 }
 
 // "2027-07-24" や "2027-10" を、年・月・日に分ける
