@@ -5,7 +5,7 @@ async function loadNews() {
   const listEl = document.getElementById("news-list");
   try {
     const response = await fetch("data/news.json");
-    allNews = await response.json();
+    allNews = await response.json();　
     allNews.sort((a, b) => b.date.localeCompare(a.date));
     renderFilter();
     renderNews();
